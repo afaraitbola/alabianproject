@@ -1,0 +1,219 @@
+
+
+#header .navbar-toggle .icon-bar{
+  background-color: black;
+}
+
+#header .menu .navbar-nav a{
+
+  padding-top: 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#header .menu .navbar-nav a:hover{
+    background-color: orange;
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    margin-top: 10px;
+
+
+}
+
+#header .menu .navbar-nav a:hover .active{
+    background-color: orange;
+
+}
+
+
+#footer{
+
+	background-color: #314057;
+	color: white;
+	width: 100%;
+	
+}
+
+#vendor{
+  margin-bottom: 50px;
+  font-family: 'Righteous', cursive;
+  font-weight: bolder;
+}
+
+
+#vendor .vendorRegLog{
+
+  width:150px;
+  height: 180px;
+  background-color: #2f479b;
+  text-align: center;
+  color: yellow;
+  border:2px solid yellow;
+  border-radius: 5px;
+
+}
+
+#vendor .vendorConnect{
+
+  width:150px;
+  height: 180px;
+  background-color: #f9c90e;
+  text-align: center;
+  color: #2f479b;
+  border:2px solid #2f479b;
+  border-radius: 5px;
+}
+
+
+#vendor .vendorInventory{
+
+  width:150px;
+  height: 180px;
+  background-color: #da1e8e;
+  text-align: center;
+  color: grey;
+  border:2px solid grey;
+  border-radius: 5px;
+}
+
+#vendor .vendorCustomerNeed{
+
+  width:150px;
+  height: 180px;
+  background-color: #20a6dd;
+  text-align: center;
+  color: #733e9a;
+  border-radius: 5px;
+  border:2px solid #733e9a;
+}
+
+
+
+#vendor .vendorIncreaseSales{
+
+  width:150px;
+  height: 180px;
+  background-color: #733e9a;
+  text-align: center;
+  color: #20a6dd;
+  border:2px solid #20a6dd;
+  border-radius: 5px;
+}
+
+
+#vendor .badge{
+   margin-top: 10px;
+   font-size: 25px;
+   margin-bottom: 10px;
+   background-color: black;
+}
+
+
+#vendor p:hover{
+
+
+cursor: pointer;
+font-size: 17px;
+}
+
+#culture{
+
+  background-color: #edf8fd;
+  height: 250px;
+}
+
+
+#brand .brand-image{
+
+  width: 100px;
+  height: 100px;
+}
+
+#brand{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#brand h3{
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+    font-family: 'Righteous', cursive;
+
+
+}
+
+#brand hr{
+
+  height: 2px;
+  background-color: blue;
+  width:100px;
+
+}
+
+#faq{
+margin-bottom: 40px;
+
+}
+
+
+#faq .question1,.question2,.question3,.question4,.question5,.question6,
+.question7,.question8,.question9,.question10,{
+  text-align: center;
+}
+
+#faq button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#faq .answer1,.answer2,.answer3,.answer4,.answer5,.answer6,.answer7,
+.answer8,.answer9,.answer10{
+
+  text-align: center;
+  margin-left: 450px;
+  width: 300px;
+  height: 70px;
+  color: black;
+  padding-top: 10px;
+  display: none;
+  background-color: green;
+}
+
+
+
+
+#contact h2{
+  text-align: center;
+}
+
+#contact .address{
+
+  width: 400px;
+  height: 300px;
+  border:2px solid blue;
+  padding-top: 80px;
+  margin-left: 50px;
+}
+
+#contact .address-map{
+
+  width: 400px;
+  height: 300px;
+  border:2px solid blue;
+  padding-top: 80px;
+  float: right;
+  margin-right: 50px;
+}
+
+#aboutUsUp{
+
+  width: 1000px;
+  height: 1000px;
+  background-color: white;
+  
+}
+
+  
