@@ -82,7 +82,7 @@ while ($getGetData = mysqli_fetch_assoc($resultSql)) {
     $table .= "<td>{$getGetData['goods_description']}</td>";
     $table .= "<td>{$getGetData['cat_name']}</td>";
     $table .="<form method='GET'>";
-    $table .= "<td><button name=delete>Delete</button></td>";
+    $table .= "<td><button name=delete onclick = 'return deleteconfig()'>Delete</button></td>";
     $table .= "</form>";
     $table .= "<td><button name=edit><a href='edit-invetory.php'>Edit</a></button></td>";
     $table .= "</tr>";
@@ -112,6 +112,27 @@ echo $table;
 <!-- MY BOOTSTRAP javascript/jquery file linking -->
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+
+
+
+<script >
+  
+  //to confirm before delete
+  
+function deleteconfig(){
+   var del = confirm("Are you sure you want to delete");
+
+   if (del==true) {
+
+     alert ('Record Delete');
+   }else{
+
+    alert('Record Not deleted');
+   }
+
+   return del;
+}
+</script>
 
 
 </body>
