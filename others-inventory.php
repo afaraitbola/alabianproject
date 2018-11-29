@@ -55,42 +55,45 @@ require_once('process-search-user-invent.php');
 
           $othersInvent = "SELECT * FROM post INNER JOIN user_registration ON user_registration.id = post.userid WHERE post.userid < $id  OR post.userid > $id";
 
-         
+
 
           $theQuery = mysqli_query($connect, $othersInvent);
-          
 
-          //FETCH ALL THE DETAILS OF THE POST OF OTHER USERS
 
-          $fetchThem = mysqli_fetch_assoc($theQuery);
+          $count = mysqli_num_rows($theQuery);
+
+
+          if($count >= 1) {
+            
+             $fetchThem = mysqli_fetch_assoc($theQuery);
            
 
-           	$table =  "<table class='table table-bordered table-striped'>";
-          	$table .= "<tr>";
-          	$table .= "<th>Date Posted</th>";
-          	$table .= "<th>Goods Name</th>";
-          	$table .= "<th>Type</th>";
-          	$table .= "<th>Description</th>";
-          	$table .= "<th>Name</th>";
-          	$table .= "<th>Address</th>";
-          	$table .= "<th>Sellers Type</th>";
-          	$table .= "<th>Email</th>";
-          	$table .= "</tr>";
+            $table =  "<table class='table table-bordered table-striped'>";
+            $table .= "<tr>";
+            $table .= "<th>Date Posted</th>";
+            $table .= "<th>Goods Name</th>";
+            $table .= "<th>Type</th>";
+            $table .= "<th>Description</th>";
+            $table .= "<th>Name</th>";
+            $table .= "<th>Address</th>";
+            $table .= "<th>Sellers Type</th>";
+            $table .= "<th>Email</th>";
+            $table .= "</tr>";
 
            //start fetch all the one you want to display in a table
 
           while ($fetchThem = mysqli_fetch_assoc($theQuery)) {
-          	
-          	$table .= "<tr>";
-          	$table .= "<td>{$fetchThem['post_date']}</td>";
-          	$table .="<td>{$fetchThem['goods_name']}</td>";
-          	$table .= "<td>{$fetchThem['category_type']}</td>";
-          	$table .="<td>{$fetchThem['goods_description']}</td>";
-          	$table .= "<td>{$fetchThem['lname']} . {$fetchThem['fname']}</td>";
-          	$table .="<td>{$fetchThem['address']}</td>";
-          	$table .= "<td>{$fetchThem['seller_type']}</td>";
-          	$table .="<td>{$fetchThem['email']}</td>";
-          	$table .= "</tr>";
+            
+            $table .= "<tr>";
+            $table .= "<td>{$fetchThem['post_date']}</td>";
+            $table .="<td>{$fetchThem['goods_name']}</td>";
+            $table .= "<td>{$fetchThem['category_type']}</td>";
+            $table .="<td>{$fetchThem['goods_description']}</td>";
+            $table .= "<td>{$fetchThem['lname']} . {$fetchThem['fname']}</td>";
+            $table .="<td>{$fetchThem['address']}</td>";
+            $table .= "<td>{$fetchThem['seller_type']}</td>";
+            $table .="<td>{$fetchThem['email']}</td>";
+            $table .= "</tr>";
 
           }
 
@@ -98,6 +101,12 @@ require_once('process-search-user-invent.php');
 
           echo $table;
      
+          }
+          
+
+          //FETCH ALL THE DETAILS OF THE POST OF OTHER USERS
+
+         
        
 
        
