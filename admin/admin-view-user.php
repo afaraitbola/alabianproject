@@ -84,7 +84,7 @@ $queryTheUsers = mysqli_query($connect, $theUsers);
  	$table .= "<td>{$fetchTheUsers['seller_type']}</td>";
  	$table .= "<td>{$fetchTheUsers['registered_date']}</td>";
   $table .= "<form method='POST'>";
- 	$table .= "<td><button type='submit' name='theDelete' value='theDelete'>DELETE</button></td>";
+ 	$table .= "<td><button type='submit' name=theDelete onclick='return checkUserDelete()'>DELETE</button></td>";
 
  	$table .= "<td><button type='submit' name='theEdit' value='theEdit'><a href='admin-edit-user.php'>EDIT</a></button></td>";
   $table .="<input type='hidden' name='adminDelUser' value='$fetchTheUsers[id]'>";
@@ -111,6 +111,25 @@ $queryTheUsers = mysqli_query($connect, $theUsers);
 <!-- MY JAVASCRIPT LINKING-->
 <script src="../javascript/jquery.js"></script>
 <script src="../javascript/script.js"></script>
+
+
+<script>
+  
+  function checkUserDelete(){
+      var toDelete = confirm("Are you sure want to delete this User");
+
+          if (toDelete==true) {
+
+            alert("User Deleted");
+
+          }else{
+
+            alert("User not Deleted");
+          }
+
+          return toDelete;
+  }
+</script>
 
 </body>
 </html>

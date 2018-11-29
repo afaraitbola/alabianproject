@@ -4,7 +4,7 @@ require_once("db_config.php");
 require_once("functions.php");
 
 
-$lname = $fname = $add = $city = $state = $country = $emailAddress = $username = $password = $gender = $sellerType = $registeredDate ="";
+$lname = $fname = $add = $city = $state = $country = $emailAddress = $username = $password = $genders = $sellerType = $registeredDate ="";
 
 if (isset($_POST["register"])) {
 	
@@ -18,8 +18,8 @@ if (isset($_POST["register"])) {
     $emailAddress = sanitize($_POST['emailAdd']);
     $username = sanitize($_POST['user']);
     $password = md5(sanitize($_POST['pass']));
-    $gender = isset($_POST['gender']);   
-     $gender = isset($_POST['gender']);   
+
+    $genders = $_POST['gender'];
 
     
 
@@ -97,7 +97,8 @@ if (!isset($_POST['seller-type'])) {
 
 if (empty($error)) {
 
-	$sql = "INSERT INTO user_registration(lname,fname,address,city,state,country,email,user,pass,gender,seller_type,registered_date) VALUES('$lname','$fname','$add','$city','$state','$country','$emailAddress','$username','$password','$gender', '$sellerType', NOW())";
+	$sql = "INSERT INTO user_registration(lname,fname,address,city,state,country,email,user,pass,gender,seller_type,registered_date) VALUES('$lname','$fname','$add','$city','$state','$country','$emailAddress','$username','$password','$genders', '$sellerType', NOW())";
+
 
 	$resultSql = mysqli_query($connect, $sql);
 
